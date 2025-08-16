@@ -1,11 +1,11 @@
-from typing import Any, Callable
+from typing import Callable
 
 __package__ = "src"
 
 # from .add import add, print_a_line
 
 
-def hello(func: Callable) -> Any:
+def hello(func: Callable) -> None:
     """Выводит строку Hello, World
     и число"""
     x = func

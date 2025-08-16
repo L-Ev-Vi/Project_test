@@ -1,10 +1,19 @@
+import os
+
 from src.add import add, print_a_line
+from src.foo import editing_the_list
 from src.hello import greeting, hello
 
-hello(add(1, 2))
+a = 1
+b = 2
+hello(add(a, b))
 
 greeting(print_a_line())
 
-from src.foo import get_information_about_the_circle
-
 print("Hello, World")
+
+
+file_path = os.path.join(os.path.dirname(__file__), "data", "names.txt")
+
+
+editing_the_list(file_path)

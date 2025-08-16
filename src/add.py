@@ -1,7 +1,7 @@
-from typing import Union
+from typing import Any
 
 
-def add(a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+def add(a: Any, b: Any) -> Any:
     """Складывает два числа"""
     a += b
     return a
@@ -21,7 +21,6 @@ if __name__ == "__main__":
     print(red(x))
 
 
-def print_a_line() -> str:
+def print_a_line() -> Any:
     """Выводит строку 'Привет'."""
     return "Привет"
-
