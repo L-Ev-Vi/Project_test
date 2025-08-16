@@ -12,8 +12,6 @@ greeting(print_a_line())
 
 print("Hello, World")
 
-
 file_path = os.path.join(os.path.dirname(__file__), "data", "names.txt")
-
 
 editing_the_list(file_path)

@@ -2,8 +2,9 @@ from typing import Union
 
 PI = 3.14
 
-r = float(input("Enter circle radius (int): "))
-"""Запрашивает значение радиуса круга"""
+
+# r = float(input("Enter circle radius (int): "))
+# """Запрашивает значение радиуса круга"""
 
 
 def circle_area(r: float) -> Union[int, float]:
@@ -35,3 +36,22 @@ def editing_the_list(file_path: str) -> None:
         new_file = "\n".join(new_list)
     with open(file_path, "w", encoding="UTF-8") as new:
         new.write(new_file)
+
+
+def editing(file_path: str) -> None:
+    """Принимает файл в виде списка строк, удаляет все сторонние элементы
+    и обновляет файл оставляя только строки с str элементами."""
+    new_list = []
+    with open(file_path, "r+", encoding="UTF-8") as file:
+        files = (file.read()).split()
+        for name_only in files:
+            new_name = ""
+            for letter in name_only:
+                if letter.isalpha():
+                    new_name += letter
+            if new_name.isalpha():
+                new_list.append(new_name)
+        new_file = "\n".join(new_list)
+        print(new_file)
+    # with open(file_path, "w", encoding="UTF-8") as new:
+    #     new.write(new_file)
