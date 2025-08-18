@@ -55,3 +55,25 @@ def editing(file_path: str) -> None:
         print(new_file)
     # with open(file_path, "w", encoding="UTF-8") as new:
     #     new.write(new_file)
+
+
+def editing_the_list_by_languages_and_alphabets(file_: str) -> None:
+    """Функция принимает текстовый файл со строками на кириллице и латинице,
+     и делит этот файл на два отсортированных по алфавиту файла на кириллице и на латинице."""
+    with open(file_, 'r', encoding='UTF-8') as file:
+        editable_file = file.read().split()
+        file_ru = []
+        file_us = []
+        for name in editable_file:
+            if name[0].lower() in 'abcdefgjhijklmnopqrstuvwxyz':
+                file_us.append(name)
+            else:
+                file_ru.append(name)
+        sort_file_ru = sorted(file_ru, key=lambda i: i[0])
+        sort_file_us = sorted(file_us, key=lambda i: i[0])
+        new_file_ru = "\n".join(sort_file_ru)
+        new_file_us = "\n".join(sort_file_us)
+    with open('data/' + 'names_ru.txt', 'w', encoding='UTF-8') as new_ru:
+        new_ru.write(new_file_ru)
+    with open('data/' + 'names_us.txt', 'w', encoding='UTF-8') as new_us:
+        new_us.write(new_file_us)
