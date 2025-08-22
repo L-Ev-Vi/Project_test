@@ -17,4 +17,9 @@ file_path = os.path.join(os.path.dirname(__file__), "data", "names.txt")
 # editing_the_list(file_path)
 editing_the_list_by_languages_and_alphabets(file_path)
 
-#Изменения
+# Изменения
+
+from src.feature0.1 import reverse
+
+if __name__ == '__main__':
+    print(reverse("Hello World"))
