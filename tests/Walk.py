@@ -1,0 +1,6 @@
+print("Hello World!")
+print("Coffe - ", 300)
+print("Bun - ", 150)
+print("Nuta - ",200)
+print("Result:", 300+150+200)
+print("Tax:", (300+150+200)/13)
