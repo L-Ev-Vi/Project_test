@@ -19,7 +19,6 @@ editing_the_list_by_languages_and_alphabets(file_path)
 
 # Изменения
 
-from src.feature0.1 import reverse
+from src.feature import reverse
 
-if __name__ == '__main__':
-    print(reverse("Hello World"))
+print(reverse("Hello World"))
