@@ -28,7 +28,7 @@ def different_list_items(list_one: list[int], list_tow: list[int]) -> list[int]:
     return now_list
 
 
-print(different_list_items([1, 2, 3, 4], [3, 4, 5, 6]))
+# print(different_list_items([1, 2, 3, 4], [3, 4, 5, 6]))
 
 
 def different_list(list_one: list[int], list_tow: list[int]) -> list[int]:
@@ -38,5 +38,5 @@ def different_list(list_one: list[int], list_tow: list[int]) -> list[int]:
     return list(set(list_one) - set(list_tow)) + list(set(list_tow) - set(list_one))
 
 
-if __name__ == '__main__':
-    print(different_list([1, 2, 3, 4], [3, 4, 5, 6]))
+
+assert (different_list([1, 2, "fvfvv", 4], [3, 4, 25515, 6]))

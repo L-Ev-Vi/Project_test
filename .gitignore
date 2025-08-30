@@ -202,4 +202,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-tests/slugify.py
+training/slugify.py
