@@ -1,0 +1,6 @@
+def reverse(text_: str) -> str:
+    """Принимает строку и возвращает строку в обратной последовательности"""
+    return text_[::-1]
+
+print("Hello World")
+#push

@@ -2,7 +2,8 @@ from typing import Callable
 
 __package__ = "src"
 
-# from .add import add, print_a_line
+
+from .add import add, print_a_line
 
 
 def hello(func: Callable) -> None:
@@ -21,5 +22,10 @@ def greeting(fun: Callable) -> None:
     print(fun)
     print("Друг")
 
+def add_plys(a: int, b: int) -> int:
+    return a+b
+
 
 # greeting(print_a_line())
+
+assert greeting(add_plys(4,5))
